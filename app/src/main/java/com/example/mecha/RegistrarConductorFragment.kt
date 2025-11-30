@@ -1,5 +1,6 @@
 package com.example.mecha
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.mecha.models.Conductor
 import com.example.mecha.models.Vehiculo
 
-class RegistrarConductorFragment : Fragment() {
+class RegistrarConductorFragment : Fragment(R.layout.registrar_conductor_fragment) {
 
     private lateinit var edtCorreo: EditText
     private lateinit var edtPassword: EditText
@@ -20,7 +21,10 @@ class RegistrarConductorFragment : Fragment() {
     private lateinit var contenedorVehiculos: LinearLayout
     private lateinit var btnGenerarVehiculos: Button
     private lateinit var btnRegistrar: Button
+    private lateinit var tvmsj: TextView
+    private lateinit var btncerrarregcon: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,18 +41,26 @@ class RegistrarConductorFragment : Fragment() {
         contenedorVehiculos = view.findViewById(R.id.contenedorVehiculos)
         btnGenerarVehiculos = view.findViewById(R.id.btnGenerarVehiculos)
         btnRegistrar = view.findViewById(R.id.btnRegistrar)
+        tvmsj= view.findViewById(R.id.tvmsj)
+        btncerrarregcon=view.findViewById(R.id.btncerrarregcond)
 
         btnGenerarVehiculos.setOnClickListener { generarVehiculos() }
         btnRegistrar.setOnClickListener { registrarConductor() }
 
+        btncerrarregcon.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
         return view
     }
+
 
     private fun generarVehiculos() {
         contenedorVehiculos.removeAllViews()
 
         val numVehiculos = edtNumVehiculos.text.toString().toIntOrNull()
         if (numVehiculos == null || numVehiculos <= 0) {
+            tvmsj.text="Ingresa Un numero valido"
             Toast.makeText(requireContext(), "Ingresa un número válido de vehículos", Toast.LENGTH_SHORT).show()
             return
         }
@@ -70,6 +82,7 @@ class RegistrarConductorFragment : Fragment() {
             edtTelefono.text.isEmpty() ||
             edtNumVehiculos.text.isEmpty()
         ) {
+            tvmsj.text="Completa todos los campos del conductor"
             Toast.makeText(requireContext(), "Completa todos los campos del conductor", Toast.LENGTH_SHORT).show()
             return
         }
@@ -89,6 +102,7 @@ class RegistrarConductorFragment : Fragment() {
             if (placa.isEmpty() || marca.isEmpty() || modelo.isEmpty() ||
                 anio.isEmpty() || color.isEmpty() || tipo.isEmpty()
             ) {
+                tvmsj.text="Completa todos los datos de cada vehículo"
                 Toast.makeText(requireContext(), "Completa todos los datos de cada vehículo", Toast.LENGTH_SHORT).show()
                 return
             }
@@ -116,4 +130,7 @@ class RegistrarConductorFragment : Fragment() {
 
         Toast.makeText(requireContext(), "Conductor listo para guardar", Toast.LENGTH_LONG).show()
     }
+
+
+
 }

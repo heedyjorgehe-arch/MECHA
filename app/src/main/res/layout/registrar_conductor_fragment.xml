@@ -10,6 +10,23 @@
         android:layout_height="wrap_content">
 
         <!-- DATOS PERSONALES -->
+        <Button
+            android:id="@+id/btncerrarregcond"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_gravity="right"/>
+        <TextView
+            android:id="@+id/tvmsj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="20sp"/>
+
         <EditText
             android:id="@+id/edtCorreo"
             android:hint="Correo"
