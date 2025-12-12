@@ -30,12 +30,12 @@ class VerNotasFragment : Fragment() {
         val sb = StringBuilder()
 
         while (cursor.moveToNext()) {
-            sb.append("Título: ")
-                .append(cursor.getString(cursor.getColumnIndexOrThrow("titulo")))
+            sb.append("Títuloo: ")
+                .append(cursor.getString(cursor.getColumnIndexOrThrow("tituloo")))
                 .append("\n")
 
-            sb.append("Descripción: ")
-                .append(cursor.getString(cursor.getColumnIndexOrThrow("descripcion")))
+            sb.append("Descripciónn: ")
+                .append(cursor.getString(cursor.getColumnIndexOrThrow("descripcionn")))
                 .append("\n\n")
         }
 

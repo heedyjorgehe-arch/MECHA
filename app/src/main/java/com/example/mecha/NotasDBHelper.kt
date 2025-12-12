@@ -21,7 +21,7 @@ class NotasDBHelper(context: Context) :
     fun insertNota(t: String, d: String): Boolean {
         val db = writableDatabase
         val cv = ContentValues()
-        cv.put("titulo", t)
+        cv.put("tituloo", t)
         cv.put("descripcion", d)
         return db.insert("notas", null, cv) != -1L
     }
@@ -30,12 +30,12 @@ class NotasDBHelper(context: Context) :
         val db = writableDatabase
         val cv = ContentValues()
         cv.put("descripcion", d)
-        return db.update("notas", cv, "titulo=?", arrayOf(t)) > 0
+        return db.update("notas", cv, "tituloo=?", arrayOf(t)) > 0
     }
 
     fun deleteNota(t: String): Boolean {
         val db = writableDatabase
-        return db.delete("notas", "titulo=?", arrayOf(t)) > 0
+        return db.delete("notas", "tituloo=?", arrayOf(t)) > 0
     }
 
     fun getNotas(): Cursor {

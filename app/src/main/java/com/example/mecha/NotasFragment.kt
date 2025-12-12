@@ -35,7 +35,7 @@ class NotasFragment : Fragment() {
             val d = edtDescripcion.text.toString()
 
             if (db.insertNota(t, d)) {
-                Toast.makeText(context, "Nota guardada", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Nota guardada con exito", Toast.LENGTH_SHORT).show()
                 edtTitulo.text.clear()
                 edtDescripcion.text.clear()
             }
