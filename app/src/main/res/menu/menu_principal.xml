@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_inicio"
-        android:title="Inicio"
-        android:icon="@android:drawable/ic_menu_view"
-        android:showAsAction="always" />
+        android:id="@+id/menu_inicio"
+        android:title="@string/menu_inicio"
+        app:showAsAction="never"/>
 
     <item
-        android:id="@+id/nav_notas"
-        android:title="Notas"
-        android:icon="@android:drawable/ic_menu_edit"
-        android:showAsAction="always" />
+        android:id="@+id/menu_notas"
+        android:title="@string/menu_notas"
+        app:showAsAction="never"/>
 
     <item
-        android:id="@+id/nav_registrar"
-        android:title="Registrar"
-        android:icon="@android:drawable/ic_menu_add"
-        android:showAsAction="always" />
+        android:id="@+id/menu_registrar"
+        android:title="@string/menu_registrar"
+        app:showAsAction="never"/>
 
     <item
-        android:id="@+id/nav_salir"
-        android:title="Salir"
-        android:icon="@android:drawable/ic_lock_power_off"
-        android:showAsAction="never" />
+        android:id="@+id/menu_salir"
+        android:title="@string/menu_salir"
+        app:showAsAction="never"/>
 
 </menu>

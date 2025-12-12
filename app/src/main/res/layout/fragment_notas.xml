@@ -9,7 +9,7 @@
     <TextView
         android:text="Notas"
         android:textSize="28sp"
-        android:textColor="#000"
+        android:textColor="#000000"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:gravity="center"
@@ -17,19 +17,20 @@
 
     <EditText
         android:id="@+id/edtTitulo"
-        android:hint="Título"
-        android:textColor="#000"
-        android:textColorHint="#444"
-        android:backgroundTint="#FB8C00"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"/>
+        android:hint="Título"
+        android:textColor="#000000"
+        android:textColorHint="#FB8C00"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:background="@android:drawable/edit_text"/>
 
     <EditText
         android:id="@+id/edtDescripcion"
         android:hint="Descripción"
-        android:textColor="#000"
-        android:textColorHint="#444"
+        android:textColor="#000000"
+        android:textColorHint="#444444"
         android:backgroundTint="#FB8C00"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -46,7 +47,7 @@
             android:id="@+id/btnGuardar"
             android:text="Guardar"
             android:backgroundTint="#FB8C00"
-            android:textColor="#000"
+            android:textColor="#000000"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
@@ -55,7 +56,7 @@
             android:id="@+id/btnEditar"
             android:text="Editar"
             android:backgroundTint="#FB8C00"
-            android:textColor="#000"
+            android:textColor="#000000"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_width="0dp"
@@ -72,7 +73,7 @@
             android:id="@+id/btnBorrar"
             android:text="Borrar"
             android:backgroundTint="#FB8C00"
-            android:textColor="#000"
+            android:textColor="#000000"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
@@ -81,7 +82,7 @@
             android:id="@+id/btnVer"
             android:text="Ver"
             android:backgroundTint="#FB8C00"
-            android:textColor="#000"
+            android:textColor="#000000"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_width="0dp"
@@ -89,3 +90,4 @@
     </LinearLayout>
 
 </LinearLayout>
+
