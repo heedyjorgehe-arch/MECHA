@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:title="Inicio"
+        android:icon="@android:drawable/ic_menu_view"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_notas"
+        android:title="Notas"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_registrar"
+        android:title="Registrar"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_salir"
+        android:title="Salir"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:showAsAction="never" />
+
+</menu>
